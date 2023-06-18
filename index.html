@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2023-06-18-11-34</title>
+    <title>2023-06-18-11-38</title>
     <meta name="theme-color" content="3B4252" />
     <style>
         h1 {
@@ -269,7 +269,7 @@
                 searchA = () => { history.style.opacity = 1, history.style.zIndex = 2, call.style.opacity = add.style.opacity = 0, call.style.zIndex = add.style.zIndex = 1 }, 
                 callA = () => { history.style.opacity = add.style.opacity = 0, history.style.zIndex = add.style.zIndex = 1, call.style.opacity = 1, call.style.zIndex = 2 }, 
                 addA = () => { history.style.opacity = call.style.opacity = 0, history.style.zIndex = call.style.zIndex = 1, add.style.opacity = 1, add.style.zIndex = 2 }; 
-                fetch(url + "?type=list").then(t => t.json()).then(t => { let e = document.getElementById("call"); e.innerHTML = "", t.forEach((t, n) => { let a = document.createElement("button"); a.textContent = t.name, a.id = `student-${n + 1}`, a.addEventListener("click", () => { rollCall(t.name, t.left, n + 1) }), e.appendChild(a) }) }).catch(t => console.error(t)); const status = document.getElementById("status"); 
+                fetch(url + "?type=list").then(t => t.json()).then(t => { let e = document.getElementById("call"); e.innerHTML = "", t.forEach((t, n) => { let a = document.createElement("button"); a.textContent = t.name, a.id = `student-${n + 1}`, a.addEventListener("click", () => { rollCall(t.name, t.left, n + 1) }), e.appendChild(a) }) }).catch(t => console.error(t)); 
                 function rollCall(t, e, n) { 
                     status.innerHTML = `${t} 點名中...`; 
                     var a = new Date, a = a.toLocaleString("zh-TW", { year: "numeric", month: "2-digit", day: "2-digit", hour: "numeric", minute: "numeric", second: "numeric", hour12: !0 }).replace("-", "/").replace(" ", " "); 
